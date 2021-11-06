@@ -67,7 +67,7 @@ Controller input:
 
 Best values:
 
-optimum values to minimize objective function J :
+Optimum values to minimize objective function J :
 kp=16.5735, kd=6.4122, ki=19.1475
 
 Objective function value: 0.0056615
@@ -75,7 +75,7 @@ Objective function value: 0.0056615
 Constraint value: -8.4102
 
 ## how ot run
-1.clone the repository.
+1.Clone the repository.
 
 2.Change parameters of your dynamical system in simulation_fcn.m and input_constraint.m files.
 
