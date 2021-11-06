@@ -8,23 +8,23 @@ n=floor((t_f-t0)/dt);
 t=linspace(t0,t_f,n);
 
 %% Plant Parameters
-m=1;
-c=0;
-k1=0;
-k2=0;
+m=2;
+c=1.5;
+k1=2;
+k2=1;
 
-x0=[0;0];
+x0=[1;-1];
 
 %% Input Parameters
-A=1;
-w=1;
+A=2;
+w=1.2;
 
 %% Disturbance & Noise Parameters
 d0=2;
 a=1.5;
 wd=4;
-sigma_p=0;
-sigma_v=0;
+sigma_p=0.01;
+sigma_v=0.01;
 
 %% Controller Parameters
 kp=theta(1);

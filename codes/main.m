@@ -17,8 +17,8 @@ cns_fcn=@(k) input_constraint(k,u_max);
 opt_alg=2; % 1 for ga and 2 for fmincon
 % It takes a long to run the code with ga, so it's better
 % to obtain the best variables with fmincon function.
-%% Optimization
 
+%% Optimization
 if opt_alg==1
     options=optimoptions('ga','Display','iter','PlotFcn', @gaplotbestf);
     k=ga(obj_fcn,nvar,[],[],[],[],lb,ub,cns_fcn,options);
