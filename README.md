@@ -51,8 +51,8 @@ Supposing bellow parameters for system:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-20-51.png">
 </div>
-### I got this results
 
+### I got this results
 Reference input and state variables:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/1.png">
