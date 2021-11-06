@@ -64,12 +64,12 @@ Controller input:
 
 best values:
 '''
-optimum values to minimize objective function 'J' :
+optimum values to minimize objective function J :
    16.5735    6.4122   19.1475
 
-    "Objective function value:"    "0.0056615"
+   "Objective function value: 0.0056615
 
-    "Constraint value:"    "-8.4102"
+    Constraint value: -8.4102
 '''
 
 ## how ot run
