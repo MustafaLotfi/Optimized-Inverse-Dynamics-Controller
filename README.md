@@ -22,7 +22,7 @@ Sensor noise:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-04-27.png">
 </div>
-Saturation constraints of the controller:
+Saturation constraint of the controller:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-46-14.png">
 </div>
