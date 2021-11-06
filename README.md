@@ -1,6 +1,6 @@
 # Optimized-PID-Controller
 ## Problem
-### We have a dynamical system and want to force it to track input reference. the controller we selected is PID. The problem here is finding the best coefficients for PID controller, with Optimization Algorithms of Matlab.
+### We have a dynamical system and want to force it to track input reference. the controller we selected is PID. The problem here is finding the best coefficients for PID controller, with Optimization Algorithms of Matlab (both classic (Gradient Descent) and metaheuristic (Genetic) algorithms).
 
 Dynamical system:
 <div align="left">
@@ -44,7 +44,7 @@ SLV.m --> Runge-kutta method to solve differential equations.
 
 simulation_fcn.m --> Simulate the system in time with controller input.
 
-main.m --> Used Optimizatoin Agorithms of Matlab to obtain best PID coefficients.
+main.m --> Used Optimizatoin Agorithms of Matlab to obtain best PID coefficients (fmincon & ga).
 
 ## Results:
 Supposing bellow parameters for system:
