@@ -1,7 +1,5 @@
 %% Information
-% Final Project, Stage 4, Optimized PID Controller
-% Programmer: Golnaz Esmaeili
-% Date: 1400/08/08
+% Optimized PID Controller
 clc;
 clear;
 close all;
