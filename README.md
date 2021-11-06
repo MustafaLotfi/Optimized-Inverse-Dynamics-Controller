@@ -2,23 +2,23 @@
 ## Problem
 ### We have a dynamical system and we want to force it to track input reference. the controller we selected is PID. The problem is finding the best coefficients for PID controller, with Optimization Algorithms of Matlab.
 
-For a given dynamical system like this:
+Dynamical system:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-03-47.png">
 </div>
-The PID controller structure is:
+PID controller structure:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-04-07.png">
 </div>
-Input reference is:
+Input reference:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-12-50.png">
 </div>
-and disturbance is:
+Disturbance:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-06-35.png">
 </div>
-Sensor noise is:
+Sensor noise:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-04-27.png">
 </div>
@@ -26,26 +26,25 @@ Saturation constraints of the controller:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-46-14.png">
 </div>
-We want to minimize the objective function:
+Objective function:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-06-54.png">
 </div>
-Optimization variables are PID coefficients:
+Optimization variables (PID coefficients):
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-07-20.png">
 </div>
-For a zero initial conditions, contorller variables should be found some how to satisfy actuator saturation constraint:
 
 ## Solve the problem
-I wrote some codes that I'll explain them in bellow:
+Explaining the codes in bellow:
 
 plant.m --> Differential equation of the system.
 
 SLV.m --> Runge-kutta method to solve differential equations.
 
-simulation_fcn.m --> simulate the system with controller input
+simulation_fcn.m --> Simulate the system in time with controller input.
 
-main.m --> used Optimizatoin Agorithms of Matlab to obtain best PID coefficients.
+main.m --> Used Optimizatoin Agorithms of Matlab to obtain best PID coefficients.
 
 ## Results:
 Supposing bellow parameters for system:
