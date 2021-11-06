@@ -1,6 +1,6 @@
 # Optimized-PID-Controller
 ## Problem
-### Optimized PID controller design for tracking reference input in presence of time variant disturbance and saturated actutor.
+### We have a dynamical system and we want to force it to track input reference. the controller we selected is PID. The problem is finding the best coefficients for PID controller, with Optimization Algorithms of Matlab.
 
 For a given dynamical system like this:
 <div align="left">
@@ -21,6 +21,10 @@ and disturbance is:
 Sensor noise is:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-04-27.png">
+</div>
+Saturation constraints of the controller:
+<div align="left">
+  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-46-14.png">
 </div>
 We want to minimize the objective function:
 <div align="left">
@@ -62,17 +66,16 @@ Controller input:
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/3.png">
 </div>
 
-best values:
-'''
+Best values:
+
 optimum values to minimize objective function J :
-   16.5735    6.4122   19.1475
+kp=16.5735, kd=6.4122, ki=19.1475
 
-   "Objective function value: 0.0056615
+Objective function value: 0.0056615
 
-    Constraint value: -8.4102
-'''
+Constraint value: -8.4102
 
 ## how ot run
 1.Change parameters of your dynamical system in simulation_fcn.m and input_constraint.m files.
 
-2.Change parameters of main.m file if you want and then run the file in Matlab to find the best coefficients with Optimization Algorithm.
+2.Change parameters of main.m file if you want and then run the file in Matlab to find the best coefficients.
