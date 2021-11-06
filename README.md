@@ -48,34 +48,22 @@ Supposing bellow parameters for system:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-20-51.png">
 </div>
-I got this results:
+### I got this results
+Reference input tracking diagram:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/1.png">
 </div>
-
+Errors:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2.png">
 </div>
-
+Controller input:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/3.png">
 </div>
 
+best values:
 '''
-Iter  Func-count            Fval   Feasibility   Step Length       Norm of   First-order  
-                                                                       step    optimality
-    0           4    5.738366e-03     0.000e+00     1.000e+00     0.000e+00     4.598e+02  
-    1          38    5.645441e-03     0.000e+00     2.254e-05     1.420e-03     3.183e+02  
-    2          82    5.643358e-03     0.000e+00     6.367e-07     2.078e-05     5.976e+02  
-    3          97    5.643358e-03     0.000e+00     4.748e-03     1.684e-05     1.704e+02  
-
-Local minimum possible. Constraints satisfied.
-
-fmincon stopped because the size of the current step is less than
-the value of the step size tolerance and constraints are 
-satisfied to within the value of the constraint tolerance.
-
-<stopping criteria details>
 optimum values to minimize objective function 'J' :
    16.5735    6.4122   19.1475
 
