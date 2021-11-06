@@ -75,6 +75,10 @@ Objective function value: 0.0056615
 Constraint value: -8.4102
 
 ## how ot run
-1.Change parameters of your dynamical system in simulation_fcn.m and input_constraint.m files.
+1.clone the repository.
 
-2.Change parameters of main.m file if you want and then run the file in Matlab to find the best coefficients.
+2.Change parameters of your dynamical system in simulation_fcn.m and input_constraint.m files.
+
+3.Change parameters of main.m file if you want.
+
+4.Run main.m file in Matlab.
