@@ -1,6 +1,6 @@
 # Optimized-PID-Controller
 ## Problem
-### We have a dynamical system and we want to force it to track input reference. the controller we selected is PID. The problem is finding the best coefficients for PID controller, with Optimization Algorithms of Matlab.
+### We have a dynamical system and want to force it to track input reference. the controller we selected is PID. The problem is finding the best coefficients for PID controller, with Optimization Algorithms of Matlab.
 
 Dynamical system:
 <div align="left">
