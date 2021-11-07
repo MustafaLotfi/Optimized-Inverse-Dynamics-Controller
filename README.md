@@ -6,30 +6,37 @@ We have a dynamical system and want to force it to track input reference. the co
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-03-47.png">
 </div>
+
 ### PID controller structure:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-04-07.png">
 </div>
+
 ### Input reference:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-12-50.png">
 </div>
+
 ### Disturbance:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-06-35.png">
 </div>
+
 ### Sensor noise:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-04-27.png">
 </div>
+
 ### Saturation constraint of the controller:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-46-14.png">
 </div>
+
 ### Objective function:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-06-54.png">
 </div>
+
 ### Optimization variables (PID coefficients):
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-07-20.png">
