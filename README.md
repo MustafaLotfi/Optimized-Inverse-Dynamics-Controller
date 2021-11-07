@@ -2,35 +2,35 @@
 ## Problem
 We have a dynamical system and want to force it to track input reference. the controller we selected is PID. The problem here is to find the best coefficients for PID controller, by Optimization Algorithms of Matlab (both classic (Gradient Descent) and metaheuristic (Genetic) algorithms).
 
-Dynamical system:
+### Dynamical system:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-03-47.png">
 </div>
-PID controller structure:
+### PID controller structure:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-04-07.png">
 </div>
-Input reference:
+### Input reference:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-12-50.png">
 </div>
-Disturbance:
+### Disturbance:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-06-35.png">
 </div>
-Sensor noise:
+### Sensor noise:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-04-27.png">
 </div>
-Saturation constraint of the controller:
+### Saturation constraint of the controller:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-46-14.png">
 </div>
-Objective function:
+### Objective function:
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-06-54.png">
 </div>
-Optimization variables (PID coefficients):
+### Optimization variables (PID coefficients):
 <div align="left">
   <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-07-20.png">
 </div>
