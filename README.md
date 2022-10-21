@@ -1,6 +1,6 @@
 # Optimized-PID-Controller
 ## Problem
-In this project, the output of a dynamical system has been controlled using a Proportional-Integral-Derivative (PID) controller. The system is Mass-Spring and represented with a second order Oridinary Differential Equation (ODE). Also the system is exposed to disturbance and noise. To find the best coefficents of PID controller, optimization algorithms were used. The algorithms are Gradient Descent and Genetic.
+In this project, the output of a dynamical system has been controlled using a Proportional-Integral-Derivative (PID) controller. The system is Mass-Spring and represented with a second order Oridinary Differential Equation (ODE). Also the system is exposed to harmonic disturbance and white gaussian noise. To find the best coefficents of PID controller, optimization algorithms were used. The algorithms are Gradient Descent and Genetic.
 
 ### Dynamical system:
 <div align="left">
