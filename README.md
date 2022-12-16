@@ -4,12 +4,12 @@ In this project, a dynamical system has been controlled using Optimized Inverse 
 
 ## Dynamical system, inputs and other variables:
 <div align="left">
-  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/1.png">
+  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/docs/images/1.png">
 </div>
 
 ## System response:
 <div align="left">
-  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2.gif">
+  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/docs/images/2.gif">
 </div>
 
 ## how ot run
