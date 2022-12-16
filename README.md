@@ -1,45 +1,10 @@
 # Optimized-PID-Controller
 ## Problem
-In this project, the output of a dynamical system has been controlled using a Proportional-Integral-Derivative (PID) controller. The system is Mass-Spring and represented with a second order Oridinary Differential Equation (ODE). Also the system is exposed to harmonic disturbance and white gaussian noise. To find the best coefficents of PID controller, optimization algorithms were used. The algorithms are Gradient Descent and Genetic.
+In this project, a dynamical system has been controlled using Inverse Dynamics method. The controller also has Proportional-Integral-Derivative (PID) gains. The system is Mass-Spring and represented with a second order Oridinary Differential Equation (ODE). In addition the system is exposed to harmonic disturbance and white gaussian noise. To find the best coefficents of PID controller, optimization algorithms were used. The algorithms are Gradient Descent and Genetic.
 
-### Dynamical system:
+### Dynamical system, inputs and other parameters:
 <div align="left">
-  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-03-47.png">
-</div>
-
-### PID controller structure:
-<div align="left">
-  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-04-07.png">
-</div>
-
-### Input reference:
-<div align="left">
-  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-12-50.png">
-</div>
-
-### Disturbance:
-<div align="left">
-  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-06-35.png">
-</div>
-
-### Sensor noise:
-<div align="left">
-  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-04-27.png">
-</div>
-
-### Saturation constraint of the controller:
-<div align="left">
-  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_21-46-14.png">
-</div>
-
-### Objective function:
-<div align="left">
-  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-06-54.png">
-</div>
-
-### Optimization variables (PID coefficients):
-<div align="left">
-  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2021-11-06_20-07-20.png">
+  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/1.png">
 </div>
 
 ## Solve the problem
