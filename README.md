@@ -1,6 +1,6 @@
 # Optimized-PID-Controller
 ## Problem
-We have a dynamical system and want to force it to track input reference. the controller we have selected is PID. The problem here is to find the best coefficients for PID controller, by Optimization Algorithms of Matlab (both classic (Gradient Descent) and metaheuristic (Genetic) algorithms).
+In this project, the output of a dynamical system has been controlled using a Proportional-Integral-Derivative (PID) controller. The system is Mass-Spring and represented with a second order Oridinary Differential Equation (ODE). Also the system is exposed to harmonic disturbance and white gaussian noise. To find the best coefficents of PID controller, optimization algorithms were used. The algorithms are Gradient Descent and Genetic.
 
 ### Dynamical system:
 <div align="left">
