@@ -9,7 +9,7 @@ In this project, a dynamical system has been controlled using Optimized Inverse 
 
 ## System response:
 <div align="left">
-  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2.png">
+  <img src="https://github.com/MustafaLotfi/Optimized-PID-Controller/blob/main/displaying/2.gif">
 </div>
 
 ## how ot run
