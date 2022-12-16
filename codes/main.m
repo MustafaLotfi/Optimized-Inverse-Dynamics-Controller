@@ -2,6 +2,7 @@
 % Project: Optimized Inverse Dynamic Controller
 % Programmer: Mostafa Lotfi
 % Date: 1/1/2022
+% Matlab version: 2021a
 clc;
 clear;
 close all;
