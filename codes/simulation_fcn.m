@@ -1,4 +1,4 @@
-function out = simulation_fcn(theta,j_u,plot_results)
+function vars = simulation_fcn(theta,j_u)
 %% Simulation Parameters
 t0=0;
 t_f=30;
@@ -13,15 +13,15 @@ c=1.5;
 k1=2;
 k2=1;
 
-x0=[1;-1];
+x0=[-1;-1];
 
 %% Input Parameters
 A=2;
 w=1.2;
 
 %% Disturbance & Noise Parameters
-d0=2;
-a=1.5;
+d0=1; %2;
+a=0.5; %1.5;
 wd=4;
 sigma_p=0.01;
 sigma_v=0.01;
@@ -44,14 +44,21 @@ x=zeros(numel(x0),n);
 xn=x;
 err=x;
 u=zeros(1,n);
-x_d=[A*sin(w*t);
-    A*w*cos(w*t);
-    -A*w^2*sin(w*t)];
+d_vec = u;
+
+% harmonic input
+% x_d=[A*sin(w*t);
+%     A*w*cos(w*t);
+%     -A*w^2*sin(w*t)];
+
+% step input
+x_d = [ones(1, n);zeros(2,n)];
 
 x(:,1)=x0;
 %% Simulation Loop
 for i=1:n
     d=d0+a*sin(wd*t(i));
+    d_vec(i) = d;
     params.d=d;
     
     xn(:,i)=x(:,i)+[sigma_p*randn;sigma_v*randn];
@@ -65,50 +72,20 @@ for i=1:n
 end
 
 j = sum(err(1,:).^2)/n;
+
 if j_u=='j'
-    out=j;
+    vars=j;
 elseif j_u=='u'
-    out=u;
+    vars=u;
+else
+    vars.t = t;
+    vars.x = x;
+    vars.x_d = x_d;
+    vars.u = u;
+    vars.j = j;
+    vars.d = d_vec;
+    vars.k = theta;
+    vars.err = err;
 end
-%% Plotting Results
-if plot_results
-    x = x(:, 1:end-1);
-    figure;
-    subplot(2,1,1);
-    plot(t,x_d(1,:),"LineWidth",2,"DisplayName","x_{d,1}");
-    hold on
-    plot(t,x(1,:),"--r","LineWidth",2,"DisplayName","x_1");
-    grid on
-    legend show
-    ylabel('x(m)','fontsize',12,'fontweight','b')
-    xlabel('time(s)','fontsize',12,'fontweight','b')
-    
-    subplot(2,1,2);
-    plot(t,x_d(2,:),"LineWidth",2,"DisplayName","x_{d,2}");
-    hold on
-    plot(t,x(2,:),"--r","LineWidth",2,"DisplayName","x_{2}");
-    grid on
-    legend show
-    ylabel('dx(m/s)','fontsize',12,'fontweight','b')
-    xlabel('time(s)','fontsize',12,'fontweight','b')
-    
-    figure;
-    subplot(2,1,1);
-    plot(t,err(1,:),"LineWidth",2);
-    grid on
-    ylabel('e(m)','fontsize',12,'fontweight','b')
-    xlabel('time(s)','fontsize',12,'fontweight','b')
-    
-    subplot(2,1,2);
-    plot(t,err(2,:),"LineWidth",2);
-    grid on
-    ylabel('edot(m/s)','fontsize',12,'fontweight','b')
-    xlabel('time(s)','fontsize',12,'fontweight','b')
-    
-    figure;
-    plot(t,u,"LineWidth",2);
-    grid on
-    ylabel('u','fontsize',12,'fontweight','b')
-    xlabel('time(s)','fontsize',12,'fontweight','b')
-end
+
 end

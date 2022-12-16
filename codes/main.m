@@ -1,20 +1,25 @@
 %% Information
-% Optimized PID Controller
+% Project: Optimized Inverse Dynamic Controller
+% Programmer: Mostafa Lotfi
+% Date: 1/1/2022
 clc;
 clear;
 close all;
 
 %% Start of optimization
 % Objective function and constraints
-obj_fcn=@(k) simulation_fcn(k,'j',false);
+opt_alg=0; % 1 for ga, 2 for fmincon and 0 for none off them
+% It takes a long to run the code with ga, so it's better
+% to achieve the best coefficents with fmincon function.
+
+default_k = [26, 10, 76];
+
+obj_fcn=@(k) simulation_fcn(k,'j');
 lb=[-10, -10, -10];
 ub=[50, 50, 50];
 u_max=20;
 nvar=numel(lb);
 cns_fcn=@(k) input_constraint(k,u_max);
-opt_alg=2; % 1 for ga and 2 for fmincon
-% It takes a long to run the code with ga, so it's better
-% to obtain the best variables with fmincon function.
 
 %% Optimization
 if opt_alg==1
@@ -26,10 +31,16 @@ elseif opt_alg==2
         'sqp','MaxIterations',30);
     
     k=fmincon(obj_fcn,k0,[],[],[],[],lb,ub,cns_fcn,options);
+else
+    k = default_k;
 end
 
-j = simulation_fcn(k,'j',true);
+vars = simulation_fcn(k,'x');
 [c,~]=input_constraint(k,u_max);
+
+%% Ploting resutls
+static_plots(vars)
+dynamic_plot(vars)
 
 %% Displying results
 disp("optimum values to minimize objective function 'J' :")
