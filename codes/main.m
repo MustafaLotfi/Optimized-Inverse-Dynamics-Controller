@@ -17,7 +17,7 @@ close all;
 
 %% Start of optimization
 % Objective function and constraints
-opt_alg=0; % 1 for ga, 2 for fmincon and 0 for none off them
+opt_alg=2; % 1 for ga, 2 for fmincon and 0 for none off them
 % It takes a long to run the code with ga, so it's better
 % to achieve the best coefficents with fmincon function.
 
@@ -49,7 +49,7 @@ vars = simulation_fcn(k,'x');
 
 %% Ploting resutls
 static_plots(vars)
-dynamic_plot(vars)
+% dynamic_plot(vars)
 
 %% Displying results
 disp("optimum values to minimize objective function 'J' :")

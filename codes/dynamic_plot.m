@@ -103,7 +103,7 @@ for i=1:n
         x(1,i)+box_h
         x(1,i)-box_h/2
         x(1,i)-box_h/2];
-    plot(box_xs,box_ys,"LineWidth",2)
+    plot(box_xs,box_ys,"LineWidth",8)
     hold off
     
     subplot(1,3,[2,3])
