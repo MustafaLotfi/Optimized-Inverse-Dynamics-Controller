@@ -1,3 +1,4 @@
+%%% Runge-kutta method to solve differential equations
 function out=SLV(X,U,params)
 dt=params.dt;
 h=params.h;

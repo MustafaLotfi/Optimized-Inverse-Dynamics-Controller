@@ -1,8 +1,16 @@
 %% Information
-% Project: Optimized Inverse Dynamic Controller
-% Programmer: Mostafa Lotfi
-% Date: 1/1/2022
-% Matlab version: 2021a
+%%% Project: Optimized Inverse Dynamic Controller
+%%% Programmer: Mostafa Lotfi
+%%% Date: 1/1/2022
+%%% Matlab version: 2021a
+
+%%% Breif description: In this project, a dynamical system has been
+%%% controlled using Optimized Inverse Dynamics method. The system is a
+%%% nonlinear mass-spring and represented with a second order Oridinary
+%%% Differential Equation (ODE). In addition, the system is exposed to 
+%%% harmonic disturbance and white gaussian noise. To find the best 
+%%% coefficents of the controller, optimization algorithms were used. The 
+%%% algorithms are Gradient Descent and Genetic. 
 clc;
 clear;
 close all;

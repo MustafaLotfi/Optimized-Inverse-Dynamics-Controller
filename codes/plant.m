@@ -1,3 +1,4 @@
+%%% Differential equation of the system
 function out=plant(X,u,params)
 m=params.m;
 c=params.c;

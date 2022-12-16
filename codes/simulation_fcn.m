@@ -1,3 +1,4 @@
+%%% System Simulation
 function vars = simulation_fcn(theta,j_u)
 %% Simulation Parameters
 t0=0;
@@ -16,12 +17,19 @@ k2=1;
 x0=[-1;-1];
 
 %% Input Parameters
-A=2;
-w=1.2;
+% harmonic input
+% A=2;
+% w=1.2;
+% x_d=[A*sin(w*t);
+%     A*w*cos(w*t);
+%     -A*w^2*sin(w*t)];
+
+% step input
+x_d = [ones(1, n);zeros(2,n)];
 
 %% Disturbance & Noise Parameters
-d0=1; %2;
-a=0.5; %1.5;
+d0=1;
+a=0.5;
 wd=4;
 sigma_p=0.01;
 sigma_v=0.01;
@@ -45,14 +53,6 @@ xn=x;
 err=x;
 u=zeros(1,n);
 d_vec = u;
-
-% harmonic input
-% x_d=[A*sin(w*t);
-%     A*w*cos(w*t);
-%     -A*w^2*sin(w*t)];
-
-% step input
-x_d = [ones(1, n);zeros(2,n)];
 
 x(:,1)=x0;
 %% Simulation Loop
