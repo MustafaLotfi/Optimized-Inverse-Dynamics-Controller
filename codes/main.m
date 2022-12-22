@@ -17,16 +17,20 @@ close all;
 
 %% Start of optimization
 % Objective function and constraints
-opt_alg=2; % 1 for ga, 2 for fmincon and 0 for none off them
-% It takes a long to run the code with ga, so it's better
+default_k = [49, 25, 50];
+opt_alg=0;
+% To find the best coefficients, enter either 1 to use ga or 2
+% to use fmincon. if you want to use the default values, enter 0.
+% Warning: It takes a long time to run the code with ga, so it's better
 % to achieve the best coefficents with fmincon function.
-
-default_k = [26, 10, 76];
+% It is possible that in primary application runs, the algorithms get
+% some coeffs that causing system instability. So run the program
+% frequently untill gaining the best coeffs.
 
 obj_fcn=@(k) simulation_fcn(k,'j');
-lb=[-10, -10, -10];
-ub=[50, 50, 50];
-u_max=20;
+lb=[-10, -10, -10];     % Lower bound for coeffs
+ub=[50, 50, 50];        % Upper bound for coeffs
+u_max=20;               % Constraint: Maximum value for unput
 nvar=numel(lb);
 cns_fcn=@(k) input_constraint(k,u_max);
 
@@ -49,7 +53,7 @@ vars = simulation_fcn(k,'x');
 
 %% Ploting resutls
 static_plots(vars)
-% dynamic_plot(vars)
+dynamic_plot(vars)
 
 %% Displying results
 disp("optimum values to minimize objective function 'J' :")
