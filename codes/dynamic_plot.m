@@ -18,7 +18,7 @@ x_base = x_min - 1.2*domain;
 box_w = 0.15 * domain;
 box_h = 0.1 * domain;
 
-borders = [-box_w/2, 0.3*domain, x_base-0.2*domain, x_max+0.2*domain];
+borders = [-2*box_w/3, 0.3*domain, x_base-0.2*domain, x_max+0.2*domain];
 
 k1_x = [0.1*domain
     0.1*domain
@@ -99,26 +99,25 @@ for i=1:n
         x(1,i)-box_h/2-gap_y
         x(1,i)-box_h/2-gap_y
         x(1,i)-box_h/2];
-    plot(k1_x, k1_y, 'b',"LineWidth", 2)
-    text(0.09*domain, x_base-gap_y, "k_1")
+    plot(k1_x, k1_y, 'c',"LineWidth", 2)
+    text(0.09*domain, x_base-gap_y, "s_1")
     
-    plot(k1_x+box_w*0.38, k1_y, 'r', "LineWidth", 2)
-    text(0.09*domain+box_w*0.38, x_base-gap_y, "k_2")
+    plot(k1_x+box_w*0.38, k1_y, 'g', "LineWidth", 2)
+    text(0.09*domain+box_w*0.38, x_base-gap_y, "s_2")
     
-    plot(c1_x, c1_y, 'b', "LineWidth", 2)
-    text(0.09*domain+box_w*0.76, x_base-gap_y, "c")
+    plot(c1_x, c1_y, 'm', "LineWidth", 2)
+    text(0.09*domain+box_w*0.76, x_base-0.9*gap_y, "d")
     
     c2_y = [x(1,i)-box_h/2-gap_y*11
         x(1,i)-box_h/2-gap_y*11
         x(1,i)-box_h/2-gap_y*11
         x(1,i)-box_h/2];
-    
-    plot(c2_x, c2_y, 'b', "LineWidth", 1.5)
+    plot(c2_x, c2_y, 'm', "LineWidth", 1.5)
     
     u_nrm = min(u(i)/(max(u)-min(u))*15*domain, domain);
     force_y=[-u_nrm, 0, -0.3*u_nrm, 0, -0.3*u_nrm]';
-    
     plot(force_x, force_y, 'k', "LineWidth", 2)
+    text(-0.6*box_w, -box_h/2, 'u')
     
     box_ys = [x(1,i)-box_h/2
         x(1,i)+box_h/2
