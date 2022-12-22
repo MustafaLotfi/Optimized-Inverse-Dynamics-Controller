@@ -15,7 +15,7 @@ In this project, a dynamical system has been controlled using Optimized Inverse 
 ## how ot run
 1.Clone the repository.
 
-2.Change parameters of dynamical system in simulation_fcn.m and input_constraint.m files if you want.
+2.Change parameters of the dynamical system in simulation_fcn.m and input_constraint.m files if you want.
 
 3.Change parameters of main.m file if you want.
 
